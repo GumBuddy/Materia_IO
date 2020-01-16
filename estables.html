@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<!--
+	IO2 by Víctor Izaguirre
+	  @VICTORPC
+-->
+<html>
+
+<head>
+    <title>Investigación de Operaciones II</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows-dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+        integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<style>
+.nav-wrapper  {
+    background-color: #ffab66  !important;
+    font-size: 14px;
+  }
+  
+.dropdown-button  {
+    background-color: #ffab66  !important;
+    font-size: 13px;
+
+  }
+
+
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-submenu > a::after {
+                border-bottom: 0.3em solid transparent;
+                border-left-color: inherit;
+                border-left-style: solid;
+                border-left-width: 0.3em;
+                border-top: 0.3em solid transparent;
+                content: " ";
+                display: block;
+                float: right;
+                height: 0;
+                margin-right: -0.6em;
+                margin-top: -0.95em;
+                width: 0;
+}
+</style>
+    <!--
+			.dropdown-submenu > .dropdown-menu {
+			    top: 0;
+			    left: 100%;
+			    margin-top: -6px;
+			    margin-left: 0;
+			    border-radius: 0.25rem;
+			}
+
+			
+
+			
+
+			.dropdown-submenu.pull-left {
+			    float: none;
+			}
+
+			.dropdown-submenu.pull-left > .dropdown-menu {
+			    left: -75%;
+			}
+
+			.dropdown-menu .divider {
+				background-color: #e5e5e5;
+				height: 1px;
+				margin: 9px 0;
+				overflow: hidden;
+			}
+
+
+-->
+</head>
+
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html"> </h1>
+            <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+
+                <a class="navbar-brand" href="index.html">Inicio</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+                    <span class="navbar-toggler-icon">Temas</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="procesosest.html">Procesos Estocásticos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Cadenas de
+                                Markov</a>
+                            <ul class="dropdown-menu">
+                                <a class="nav-link" href="definicionmark.html">Definición</a>
+                                <a class="nav-link" href="tipestados.html">Tipos de estados</a>
+                                <a class="nav-link" href="largoP.html">Comportamiento a largo plazo</a>
+                                <a class="nav-link" href="cortoP.html">Comportamiento a corto plazo</a>
+                                <a class="nav-link" href="cadenasabs.html">Cadenas absorbentes</a>
+                    
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelos de
+                                Línea de Espera</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Líneas de Espera</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="dispCol.html">Disciplina de colas</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="distL.html">Distribución de llegadas</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="disTS.html">Distribución de los tiempos de servicio</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Exponenciales</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="1cP.html">Un solo canal, con llegadas Poisson</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="mcP.html">Múltiples canales, con llegadas Poisson</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Arbitrarios</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="1cSA.html">Un solo canal</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="mcSA.html">Múltiples canales y sin líneas de espera</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelo de
+                                Inventarios</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda conocida</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="loteeconomico.html">Modelo de lote económico</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="politicainv.html">Política Óptima de inventario para EQQ</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="faltantes.html">Modelo EQQ con faltantes planeados</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="descuentos.html">Modelo EQQ con descuentos por volumen</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="costovar.html">Modelo EQQ con rebastecimiento gradual</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda incierta</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="perecederos.html">Para productos perecederos</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="estables.html">Revisión contínua para productos estables</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- Banner -->
+        <section id="banner">
+            <h2>Modelo de inventarios de revisión contínua para productos estables</h2>
+
+        </section>
+
+        <!-- Main -->
+        <section id="main" class="container">
+
+            <section class="box special">
+                <h3>Definición.</h3><br>
+                <h6>El modelo está diseñado para productos estables (productos que pueden venderse por tiempo indefinido) en oposición a los productos perecederos (se venden sólo durante un lapso muy corto).</h6><br>
+                <h6>Está diseñado para un sistema de inventario de revisión contínua, porque supone  que el nivel de inventario se supervisa todo el tiempo de modo que puede colocarse un nuevo pedido tan pronto como el nivel de inventario baje al punto de reorden, contrario al sistema de inventarios de revisión periódica, donde el nivel de inventario sólo se revisa cada cierto período, como al final de cada semana.</h6><br>            
+            </section>
+
+            <section class="box special">
+                <h6>El método tradicional para implantar un sistema de inventarios de revisión contínua es un sistema de dos contenedores.</h6><br>
+                <h6>Todas las unidades de un producto en particular se colocan en dos contenedores. La capacidad de un contenedor equivale al punto de reorden.</h6><br>
+                <h6>Primero, se retiran las unidades del otro contenedor. Entonces, cuando se vacía este segundo contenedor, se pone en marcha colocar un pedido nuevo.</h6><br>
+                <h6>Durante el tiempo de entrega hasta recibir este pedido, las unidades se retiran del primer contenedor.</h6><br>
+            </section>
+
+            <section class="box special">
+                <h6>En los últimos años, el sistema de dos contenedores se ha reemplazado por sistemas de inventarios computarizados.</h6><br>
+                <h6>Cada adición al inventario y cada venta que ocasiona un retiro se registran en forma electrónica, de modo que siempre está disponible el nivel actual del inventario en la computadora.</h6><br>
+                <h6>Por lo tanto, las computadoras generan un nuevo pedido en cuanto el nivel del inventario llega al punto de reorden.</h6><br>
+            </section>
+
+            <section class="box special">
+                <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+            </section>
+
+            <section class="box special">
+                <h3>Justificación.</h3><br>
+                <h6>Debido al uso extenso de las computadoras para la administración moderna de inventarios, los sistemas de inventarios de revisión contínua se usan cada vez más para productos estables con la importancia suficiente para justificar una política de inventarios formal.</h6><br>
+                <ol>
+                    <li>Un sistema de revisión contínua de inventarios para un producto estable dado por lo común estará basado en dos variables críticas:</li><br>
+                    <p>R = punto de reorden</p><br>
+                    <p>Q = cantidad a ordenar</p><br>
+                    <li>Para un fabricante que maneja su inventario de productos terminados, la orden será para una corrida de producción de tamaño Q.</li><br>
+                    <li>Para un mayorista o detallista (o para un fabricante que reabastece su inventario de materia prima de un proveedor), la orden será un pedido de compra de Q unidades del producto.</li><br>
+                    <li>Una política de inventarios basada en estos dos números críticos es sencilla.</li>
+                </ol>
+            </section>
+
+            <section class="box special">
+                <h3>Política de inventario.</h3><br>
+                <h6>«Cada vez que el nivel del inventario del producto baja a R unidades, coloca una orden de Q unidades para reabastecer el inventario.»</h6><br>
+                <h6>Esta política con frecuencia se llama política de punto de reorden, cantidad a ordenar o abreviado, política (R, Q), (En consecuencia, se podría hacer referencia al modelo completo como el modelo (R, Q)).</h6><br>
+                <h6>También se usan otras variaciones de estos nombres, como política (Q, R), modelo (Q, R).</h6><br>
+            </section>
+
+            <section class="box special">
+                <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+            </section>
+
+            <section class="box special">
+                <h3>Suposiciones del modelo.</h3><br>
+                <ol>
+                    <li>Cada aplicación involucra un solo producto estable.</li><br>
+                    <li>El nivel de inventario está bajo revisión contínua, por lo que su valor actual siempre se conoce.</li><br>
+                    <li>Ha de usarse una política (R, Q), y las únicas decisiones que se toman son los valores de R y Q.</li><br>
+                    <li>Hay un tiempo de entrega entre colocar la orden y recibir la cantidad del pedido. El tiempo de espera puede ser fijo o variable.</li><br>
+                    <li>La demanda para retirar unidades del inventario para venderlas (o cualquier otro propósito) durante este tiempo de entrega es incierta. Sin embargo, se conoce su distribución de probabilidad (o al menos se puede estimar).</li><br>
+                    <li>Si ocurre un faltante antes de recibir el pedido, la demanda excedente es un pedido pendiente, que se surte cuando llega la orden.</li><br>
+                    <li>Se incurre en un costo de preparación (denotado por K) cada vez que se coloca una orden.</li><br>
+                    <li>Excepto por este costo de preparación, el costo de la orden es proporcional a la cantidad a ordenar Q.</li><br>
+                    <li>Se incurre en cierto costo de mantener (denotado por h) por cada unidad en el inventario por unidad de tiempo.</li><br>
+                    <li>Cuando ocurre un faltante, se incurre en cierto costo por faltantes (denotado por p) por cada unidad pendiente de entrega por unidad de tiempo hasta que se surte el pedido.</li><br>
+                </ol>
+            </section>
+
+            <section class="box special">
+                <h3>Similitud con otros modelos.</h3><br>
+                <h6>Este modelo también está relacionado de cerca con el modelo EOQ con faltantes planeados.</h6><br>
+                <h6>De hecho, todas las suposiciones también son consistentes con este modelo, a excepción de la suposición 5: en lugar de tener una demanda incierta, este modelo supone una demanda conocida con una tasa fija.</h6><br>
+                <h6>Debido a la relación cercana entre estos dos modelos, sus resultados deben ser muy parecidos.</h6><br>
+            </section>
+
+            <section class="box special">
+                <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+            </section>
+
+            <section class="box special">
+                <h3>Selección de la cantidad a ordenar Q.</h3><br>
+                <h6>El enfoque más directo para seleccionar Q para el modelo actual es simplemente usar la fórmula dada para el modelo EOQ con faltantes planeados.</h6><br>
+                <h6>Tal fórmula es la siguiente: </h6><br>
+                <img src="images/estable1.png" height="100"><br><br>
+                <h6>Donde D es la demanda promedio por unidad de tiempo y K, h y p están definidas en las suposiciones 7, 9 y 10, respectivamente.</h6><br>
+                <h6>Esta Q sólo será una aproximación de la cantidad óptima a ordenar para el modelo actual.</h6><br>
+            </section>
+
+            <section class="box special">
+                <h3>Selección del punto R de reorden.</h3><br>
+                <h6>Un enfoque común para elegir el punto de R es basarlo en el nivel de servicio que la administración desea para los clientes.</h6><br>
+                <h6>Así, el punto de inicio es obtener una decisión administrativa acerca del nivel del servicio.</h6><br>
+            </section>
+
+            <section class="box special">
+                <h3>Medidas alternativas del nivel de servicio.</h3><br>
+                <ol>
+                    <li>La probabilidad de que no ocurra un faltante entre el tiempo en que se coloca una orden y en que se recibe, (Ésta es la definición usada para el modelo de inventarios de productos perecederos).</li><br>
+                    <li>El número promedio de faltantes por año.</li><br>
+                    <li>El porcentaje promedio de la demanda anual que puede satisfacerse de inmediato (sin faltantes).</li><br>
+                    <li>El retraso promedio en el surtido de los pedidos pendientes cuando ocurre un faltante.</li><br>
+                    <li>El retraso promedio total en el llenado de pedidos (donde el retraso sin un desabasto es 0).</li><br>
+                </ol>
+            </section>
+
+            <section class="box special">
+                <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+            </section>
+
+            <section class="box special">
+                <h3>Relaciones entre las medidas.</h3><br>
+                <h6>Las medidas 1 y 2 están muy relacionadas.</h6><br>
+                <h6>Por ejemplo, supongamos que la cantidad a ordenar Q se ha establecido en 10% de la demanda anual, de modo que coloca un promedio de 10 pedidos anuales.</h6><br>
+                <h6>Si 0.2 es la probabilidad de que ocurra un faltante durante el tiempo de entrega hasta que se recibe el pedido, entonces el número promedio de faltante por año sería 10(0.2)=2.</h6><br>
+            </section>
+
+            <section class="box special">
+                <h3>Más relaciones entre las medidas.</h3><br>
+                <h6>Las medidas 2 y 3 también se relacionan.</h6><br>
+                <h6>Por ejemplo, supongamos que ocurre un promedio de dos faltantes por año y que la duración promedio de un faltante es de nueve días.</h6><br>
+                <h6>Puesto que 2(9)=18 días de faltante por año son en esencia 5% del año, el promedio porcentual de la demanda anual que puede satisfacerse de inmediato sería 95%.</h6><br>
+                <h6>Adicionalmente, las medidas 3, 4 y 5 están relacionadas.</h6><br>
+                <h6>Por ejemplo, supongamos que el promedio porcentual de la demanda anual que puede satisfacerse de inmediato es 95% y que el retraso promedio para surtir los pedidos pendientes cuando ocurre un faltante es cinco días.</h6><br>
+                <h6>Como sólo 5% de los clientes incurren en este retraso, el retraso promedio global para surtir los pedidos sería 0.05(5)=0.25 días por orden.</h6><br>
+                <h6>Se requiere tomar una decisión administrativa acerca del valor deseado de al menos una de estas medidas del nivel de servicio.</h6><br>
+                <h6>Después de seleccionar una de ellas para centrar la atención, es útil explorar las implicaciones de varios valores alternativos de esta medida sobre algunas de las otras medidas antes de elegir la mejor alternativa.</h6><br>
+                <h6>Tal vez, la medida 1 es la más conveniente como medida principal, de modo que se centrará la atención en este caso. El nivel de servicio deseado para esta medida se denotará por L, así: </h6><br>
+                <p>L = probabilidad deseada por la administración de que no            un faltante entre el tiempo en que se coloca un pedido y se la cantidad ordenada.</p><br>
+                <h6>El uso de la medida 1 involucra trabajar con la distribución de probabilidad estimada durante el tiempo de entrega de la orden.</h6><br>
+            </section>
+
+            <ul class="actions special">
+                <li><a href="faltantes.html" class="button">Atrás</a></li>
+                <li><a href="index.html" class="button">Inicio</a></li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; Investigación de Operaciones II. Universidad Autónoma de Campeche. Todos los derechos reservados.</li><li>Equipo de desarrollo: Izaguirre, Víctor. Segovia, Mario</li><li>Diseñado por: Víctor Izaguirre</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<!--
+	IO2 by Víctor Izaguirre
+	  @VICTORPC
+-->
+<html>
+<head>
+    <title>Investigación de Operaciones II</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows-dark.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-basic.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+<style>
+.nav-wrapper  {
+    background-color: #ffab66  !important;
+    font-size: 14px;
+  }
+  
+.dropdown-button  {
+    background-color: #ffab66  !important;
+    font-size: 13px;
+
+  }
+
+
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+	display: block;
+}
+.dropdown-submenu > a::after {
+				border-bottom: 0.3em solid transparent;
+				border-left-color: inherit;
+				border-left-style: solid;
+				border-left-width: 0.3em;
+				border-top: 0.3em solid transparent;
+				content: " ";
+				display: block;
+				float: right;
+				height: 0;
+				margin-right: -0.6em;
+				margin-top: -0.95em;
+				width: 0;
+}
+</style>
+<!--
+			.dropdown-submenu > .dropdown-menu {
+			    top: 0;
+			    left: 100%;
+			    margin-top: -6px;
+			    margin-left: 0;
+			    border-radius: 0.25rem;
+			}
+
+			
+
+			
+
+			.dropdown-submenu.pull-left {
+			    float: none;
+			}
+
+			.dropdown-submenu.pull-left > .dropdown-menu {
+			    left: -75%;
+			}
+
+			.dropdown-menu .divider {
+				background-color: #e5e5e5;
+				height: 1px;
+				margin: 9px 0;
+				overflow: hidden;
+			}
+
+
+-->
+</head>
+<body class="landing is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="index.html"> </h1>
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+    
+  <a class="navbar-brand" href="index.html">Inicio</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+        <span class="navbar-toggler-icon">Temas</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar1">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="procesosest.html">Procesos Estocásticos</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Cadenas de Markov</a>
+                <ul class="dropdown-menu">
+                    <a class="nav-link" href="definicionmark.html">Definición</a>
+                    <a class="nav-link" href="tipestados.html">Tipos de estados</a>
+                    <a class="nav-link" href="largoP.html">Comportamiento a largo plazo</a>
+                    <a class="nav-link" href="cortoP.html">Comportamiento a corto plazo</a>
+                    <a class="nav-link" href="cadenasabs.html">Cadenas absorbentes</a>
+                    
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelos de Línea de Espera</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item dropdown-submenu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Líneas de Espera</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="dispCol.html">Disciplina de colas</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="distL.html">Distribución de llegadas</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="disTS.html">Distribución de los tiempos de servicio</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Exponenciales</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="1cP.html">Un solo canal, con llegadas Poisson</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="mcP.html">Múltiples canales, con llegadas Poisson</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="dropdown-item dropdown-submenu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Arbitrarios</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="1cSA.html">Un solo canal</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="mcSA.html">Múltiples canales y sin líneas de espera</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelo de Inventarios</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item dropdown-submenu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda conocida</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                            <a href="loteeconomico.html">Modelo de lote económico</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="politicainv.html">Política Óptima de inventario para EQQ</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="faltantes.html">Modelo EQQ con faltantes planeados</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="descuentos.html">Modelo EQQ con descuentos por volumen</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="costovar.html">Modelo EQQ con rebastecimiento gradual</a>
+                                        </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda incierta</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="perecederos.html">Para productos perecederos</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="estables.html">Revisión contínua para productos estables</a>
+                                        </li>
+                                    </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>      
+    </div>
+        </nav>
+    </header>
+    
+   
+
+    <!-- Banner -->
+    <section id="banner">
+        <h2>Modelo de línea de espera de múltiples canales con llegadas Poisson</h2>
+        
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="container">
+
+        <section class="box special">
+            <h3>Definición.</h3>
+            <br>
+            <h6>Una línea de espera de múltiples canales se compone de dos o más canales de servicio que se supone son idénticos en función de capacidad de servicio. </h6>
+            <br>
+            <h6>En el sistema de múltiples canales, las unidades que llegan esperan en una sola línea y luego se dirigen al primer canal disponible para ser atendidas.</h6>
+            <br>
+            <img src="images/for47.png" height="350"> <br> <br>
+            <h6>En esta sección se presentan fórmulas para determinar la características de operación constante de una línea de espera de múltiples canales. Estas fórmulas son apropiadas si existen las siguientes condiciones: </h6> <br>
+            <ol>
+                <li>Las llegadas siguen una distribución de probabilidad de Poisson.</li><br>
+                <li>El tiempo de servicio de cada canal sigue una distribución de probabilidad exponencial.</li> <br>
+                <li>La tasa de servicios μ es la misma para cada canal.</li> <br>
+                <li>Las llegadas esperan en una sola línea de espera y luego se dirigen al primer canal abierto para que las atiendan.</li>
+            </ol>           
+        </section>
+
+        <section class="box special">
+            <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+        </section>
+
+        <section class="box special">
+            <h3>Características de operación</h3>
+            <br>
+            <h6>Las siguientes fórmulas se utilizan para calcular las características de operación de líneas de espera de múltiples canales, donde: </h6>
+            <br>
+            <ul>
+                <li>λ = tasa de llegadas del sistema</li>
+                <li>μ = tasa de servicios de cada canal</li>
+                <li>κ = número de canales</li>
+            </ul> <br><br>
+            <ol>
+                <li>Probabilidad de que no haya unidades en el sistema: </li> <br>
+                <img src="images/for48.png" height="80"> <br> <br>
+                <li>Número promedio de unidades en la línea de espera: </li> <br>
+                <img src="images/for49.png" height="80"> <br> <br>
+                <li>Número promedio de unidades en el sistema: </li> <br>
+                <img src="images/for50.png" height="60"> <br> <br>
+                <li>Tiempo promedio que una unidad pasa en la línea de espera: </li> <br>
+                <img src="images/for51.png" height="60"> <br> <br>
+                <li>Tiempo promedio que una unidad pasa en el sistema: </li> <br>
+                <img src="images/for52.png" height="60"> <br> <br>
+                <li>Probabilidad de que una unidad que llega tenga que esperar a que la atiendan: </li> <br>
+                <img src="images/for53.png" height="80"> <br> <br>
+                <li>Probabilidad de que haya n unidades en el sistema: </li> <br>
+                <img src="images/for54.png" height="120"> <br> <br>
+            </ol>
+        </section>
+
+        <section class="box special">
+            <h6>Como μ es la tasa de servicios de cada canal, κμ es la del sistema de múltiples canales.</h6> <br>
+            <h6>Al igual que para el modelo de espera de canal único, las fórmulas de las características de operación de líneas de espera de múltiples canales se aplican sólo en situaciones en las que la tasa de servicios del sistema es mayor que su tasa de llegadas, en otros términos, las fórmulas se aplican sólo si κμ es mayor que λ.</h6>
+        </section>
+
+        <section class="box special">
+            <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+        </section>
+
+        <section class="box special">
+            <h3>PROBABILIDAD DE QUE HAYA n CLIENTES EN EL SISTEMA EN EL PROBLEMA DE LA LÍNEA DE ESPERA DE BURGER DOME</h3>
+            <br><br>
+            <table width="700" class="responsive-table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Número de Canales (κ)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Razón   λ / μ</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>0.15</td>
+                            <td>0.8605</td>
+                            <td>0.8607</td>
+                            <td>0.8607</td>
+                            <td>0.8607</td>
+                        </tr>
+                        <tr>
+                            <td>0.20</td>
+                            <td>0.8182</td>
+                            <td>0.8187</td>
+                            <td>0.8187</td>
+                            <td>0.8187</td>
+                        </tr>
+                        <tr>
+                            <td>0.25</td>
+                            <td>0.7778</td>
+                            <td>0.7788</td>
+                            <td>0.7788</td>
+                            <td>0.7788</td>
+                        </tr>
+                        <tr>
+                            <td>0.30</td>
+                            <td>0.7391</td>
+                            <td>0.7407</td>
+                            <td>0.7408</td>
+                            <td>0.7408</td>
+                        </tr>
+                        <tr>
+                            <td>0.35</td>
+                            <td>0.7021</td>
+                            <td>0.7046</td>
+                            <td>0.7047</td>
+                            <td>0.7047</td>
+                        </tr>
+                        <tr>
+                            <td>0.40</td>
+                            <td>0.6667</td>
+                            <td>0.6701</td>
+                            <td>0.6703</td>
+                            <td>0.6703</td>
+                        </tr>
+                        <tr>
+                            <td>0.45</td>
+                            <td>0.6327</td>
+                            <td>0.6373</td>
+                            <td>0.6376</td>
+                            <td>0.6376</td>
+                        </tr>
+                        <tr>
+                            <td>0.50</td>
+                            <td>0.6000</td>
+                            <td>0.6061</td>
+                            <td>0.6065</td>
+                            <td>0.6065</td>
+                        </tr>
+                        <tr>
+                            <td>0.55</td>
+                            <td>0.5686</td>
+                            <td>0.5763</td>
+                            <td>0.5769</td>
+                            <td>0.5769</td>
+                        </tr>
+                        <tr>
+                            <td>0.60</td>
+                            <td>0.5385</td>
+                            <td>0.5479</td>
+                            <td>0.5487</td>
+                            <td>0.5488</td>
+                        </tr>
+                        <tr>
+                            <td>0.65</td>
+                            <td>0.5094</td>
+                            <td>0.5209</td>
+                            <td>0.5219</td>
+                            <td>0.5220</td>
+                        </tr>
+                        <tr>
+                            <td>0.70</td>
+                            <td>0.4815</td>
+                            <td>0.4952</td>
+                            <td>0.4965</td>
+                            <td>0.4966</td>
+                        </tr>
+                        <tr>
+                            <td>0.75</td>
+                            <td>0.4545</td>
+                            <td>0.4706</td>
+                            <td>0.4722</td>
+                            <td>0.4724</td>
+                        </tr>
+                        <tr>
+                            <td>0.80</td>
+                            <td>0.4286</td>
+                            <td>0.4472</td>
+                            <td>0.4491</td>
+                            <td>0.4493</td>
+                        </tr>
+                        <tr>
+                            <td>0.85</td>
+                            <td>0.4035</td>
+                            <td>0.4248</td>
+                            <td>0.4271</td>
+                            <td>0.4274</td>
+                        </tr>
+                        <tr>
+                            <td>0.90</td>
+                            <td>0.3793</td>
+                            <td>0.4035</td>
+                            <td>0.4062</td>
+                            <td>0.4065</td>
+                        </tr>
+                        <tr>
+                            <td>0.95</td>
+                            <td>0.3559</td>
+                            <td>0.3831</td>
+                            <td>0.3863</td>
+                            <td>0.3867</td>
+                        </tr>
+                        <tr>
+                            <td>1.00</td>
+                            <td>0.3333</td>
+                            <td>0.3636</td>
+                            <td>0.3673</td>
+                            <td>0.3678</td>
+                        </tr>
+                        <tr>
+                            <td>1.20</td>
+                            <td>0.2500</td>
+                            <td>0.2941</td>
+                            <td>0.3002</td>
+                            <td>0.3011</td>
+                        </tr>
+                        <tr>
+                            <td>1.40</td>
+                            <td>0.1765</td>
+                            <td>0.2360</td>
+                            <td>0.2449</td>
+                            <td>0.2463</td>
+                        </tr>
+                        <tr>
+                            <td>1.60</td>
+                            <td>0.1111</td>
+                            <td>0.1872</td>
+                            <td>0.1993</td>
+                            <td>0.2014</td>
+                        </tr>
+                        <tr>
+                            <td>1.80</td>
+                            <td>0.0526</td>
+                            <td>0.1460</td>
+                            <td>0.1616</td>
+                            <td>0.1646</td>
+                        </tr>
+                        <tr>
+                            <td>2.00</td>
+                            <td></td>
+                            <td>0.1111</td>
+                            <td>0.1304</td>
+                            <td>0.1343</td>
+                        </tr>
+                        <tr>
+                            <td>2.20</td>
+                            <td></td>
+                            <td>0.0815</td>
+                            <td>0.1046</td>
+                            <td>0.1094</td>
+                        </tr>
+                        <tr>
+                            <td>2.40</td>
+                            <td></td>
+                            <td>0.0562</td>
+                            <td>0.0831</td>
+                            <td>0.0889</td>
+                        </tr>
+                        <tr>
+                            <td>2.60</td>
+                            <td></td>
+                            <td>0.0345</td>
+                            <td>0.0651</td>
+                            <td>0.0721</td>
+                        </tr>
+                        <tr>
+                            <td>2.80</td>
+                            <td></td>
+                            <td>0.0160</td>
+                            <td>0.0521</td>
+                            <td>0.0581</td>
+                        </tr>
+                        <tr>
+                            <td>3.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0377</td>
+                            <td>0.0466</td>
+                        </tr>
+                        <tr>
+                            <td>3.20</td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0273</td>
+                            <td>0.0273</td>
+                        </tr>
+                        <tr>
+                            <td>3.40</td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0186</td>
+                            <td>0.0293</td>
+                        </tr>
+                        <tr>
+                            <td>3.60</td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0113</td>
+                            <td>0.0228</td>
+                        </tr>
+                        <tr>
+                            <td>3.80</td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0051</td>
+                            <td>0.0174</td>
+                        </tr>
+                        <tr>
+                            <td>4.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0130</td>
+                        </tr>
+                        <tr>
+                            <td>4.20</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0093</td>
+                        </tr>
+                        <tr>
+                            <td>4.40</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0063</td>
+                        </tr>
+                        <tr>
+                            <td>4.60</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0038</td>
+                        </tr>
+                        <tr>
+                            <td>4.80</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.0017</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </section>
+
+        <section class="box special">
+            <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+        </section>
+
+        <section class="box special">
+            <h3>Características de operación en el problema de Burger Dome</h3> <br>
+            <h6>Para ilustrar el modelo de línea de múltiples canales, volvamos al problema de la línea de espera del restaurante de comida rápida Burger Dome.</h6> <br>
+            <h6>Suponga que la gerencia desea evaluar la conveniencia de abrir una estación de procesamiento de pedidos de modo que dos clientes puedan ser atendidos al mismo tiempo. Suponga una línea de espera única con el primer cliente que se dirige al primer despachador disponible. </h6> <br>
+            <h6>Utilizamos las ecuaciones 1 a 6 para el sistema de κ = 2 canales. Con una tasa de llegadas de λ = 0.75 clientes por minuto y una tasa de servicios de μ = 1 cliente por minuto para cada canal, se obtienen las características de operación: </h6> <br><br>
+            <img src="images/for55.png" height="320">
+
+        </section>
+
+        <ul class="actions special">
+            <li><a href="1cP.html" class="button">Atrás</a></li>
+            <li><a href="1cSA.html" class="button">Siguiente</a></li>
+        </ul>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; Investigación de Operaciones II. Universidad Autónoma de Campeche. Todos los derechos reservados.</li><li>Equipo de desarrollo: Izaguirre, Víctor. Segovia, Mario</li><li>Diseñado por: Víctor Izaguirre</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dropdown.js"></script>
+
+</body>
+</html>

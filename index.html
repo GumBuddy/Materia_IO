@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<!--
+	IO2 by Víctor Izaguirre
+	  @VICTORPC
+-->
+<html>
+<head>
+    <title>Investigación de Operaciones II</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/sidenav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows-dark.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-arrows.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether-theme-basic.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+<style>
+.nav-wrapper  {
+    background-color: #ffab66  !important;
+    font-size: 14px;
+  }
+  
+.dropdown-button  {
+    background-color: #ffab66  !important;
+    font-size: 13px;
+
+  }
+
+
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+	display: block;
+}
+.dropdown-submenu > a::after {
+				border-bottom: 0.3em solid transparent;
+				border-left-color: inherit;
+				border-left-style: solid;
+				border-left-width: 0.3em;
+				border-top: 0.3em solid transparent;
+				content: " ";
+				display: block;
+				float: right;
+				height: 0;
+				margin-right: -0.6em;
+				margin-top: -0.95em;
+				width: 0;
+}
+</style>
+
+</head>
+<body class="landing is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="index.html"> </h1>
+
+        
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+
+                		
+  			<a class="navbar-brand" href="index.html">Inicio</a>
+    		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+        	<span class="navbar-toggler-icon">Temas</span>
+    		</button>
+    		<div class="collapse navbar-collapse" id="navbar1">
+    			
+        		<ul class="navbar-nav">
+            		<li class="nav-item active">
+                		<a class="nav-link" href="procesosest.html">Procesos Estocásticos</a>
+            		</li>
+
+            		<li class="nav-item dropdown">
+                	<a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Cadenas de Markov</a>
+                	<ul class="dropdown-menu">
+                    	<a class="nav-link" href="definicionmark.html">Definición</a>
+                    	<a class="nav-link" href="tipestados.html">Tipos de estados</a>
+                    	<a class="nav-link" href="largoP.html">Comportamiento a largo plazo</a>
+                    	<a class="nav-link" href="cortoP.html">Comportamiento a corto plazo</a>
+                    	<a class="nav-link" href="cadenasabs.html">Cadenas absorbentes</a>
+                    	
+                	</ul>
+            		</li>
+            		<li class="nav-item dropdown">
+                		<a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelos de Línea de Espera</a>
+                		<ul class="dropdown-menu">
+                    		<li class="dropdown-item dropdown-submenu">
+                        		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Líneas de Espera</a>
+                        		<ul class="dropdown-menu">
+                            		<li class="dropdown-item">
+                                		<a href="dispCol.html">Disciplina de colas</a>
+                            		</li>
+                            		<li class="dropdown-item">
+                                		<a href="distL.html">Distribución de llegadas</a>
+                            		</li>
+                            		<li class="dropdown-item">
+                                		<a href="disTS.html">Distribución de los tiempos de servicio</a>
+                            		</li>
+                        		</ul>
+                    		</li>
+                    		<li class="dropdown-item dropdown-submenu">
+                        		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Exponenciales</a>
+                        		<ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        <a href="1cP.html">Un solo canal, con llegadas Poisson</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="mcP.html">Múltiples canales, con llegadas Poisson</a>
+                                    </li>
+                                </ul>
+
+                    		</li>
+                    		<li class="dropdown-item dropdown-submenu">
+                        		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Servicios Arbitrarios</a>
+                        		<ul class="dropdown-menu">
+                            		<li class="dropdown-item">
+                                		<a href="1cSA.html">Un solo canal</a>
+                            		</li>
+                            		<li class="dropdown-item">
+                                		<a href="mcSA.html">Múltiples canales y sin líneas de espera</a>
+                            		</li>
+                        		</ul>
+
+                    		</li>
+                		</ul>
+            		</li>
+
+            		<li class="nav-item dropdown">
+                		<a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle">Modelo de Inventarios</a>
+                		<ul class="dropdown-menu">
+                    		<li class="dropdown-item dropdown-submenu">
+                        		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda conocida</a>
+                        		<ul class="dropdown-menu">
+                            		<li class="dropdown-item">
+                                            <a href="loteeconomico.html">Modelo de lote económico</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="politicainv.html">Política Óptima de inventario para EQQ</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="faltantes.html">Modelo EQQ con faltantes planeados</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="descuentos.html">Modelo EQQ con descuentos por volumen</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="costovar.html">Modelo EQQ con rebastecimiento gradual</a>
+                                        </li>
+                        		</ul>
+                    		</li>
+                    		<li class="dropdown-item dropdown-submenu">
+                        		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Con demanda incierta</a>
+                        		<ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="perecederos.html">Para productos perecederos</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="estables.html">Revisión contínua para productos estables</a>
+                                        </li>
+                                </ul>
+
+                    		</li>
+                		</ul>
+            		</li>
+
+        		</ul>      
+    		</div>
+        </nav>
+        
+    </header>
+    
+   
+
+    <!-- Banner -->
+    <section id="banner">
+        <h2>Investigación de Operaciones II</h2>
+        <p>Bienvenido a la página principal de la materia "Invesstigación de Operaciones II", materia a cargo de la maestra Diana C Mex Alvarez</p>
+        <ul class="actions special">
+            <li><a href="procesosest.html" class="button">Inicia el Curso!</a></li>
+        </ul>
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="container">
+
+        <section class="box special">
+            <header class="major">
+                <h2>Una página diseñada para ayudarte en el estudio de la meteria!,
+                    <br />
+                    con material de estudio útil.</h2>
+                <p>Aquí encontrarás la teoría de los temas expuestos en clase y en el Programa de Unidad de Aprendizaje de la materia.</p>
+            </header>
+            <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+        </section>
+
+        <section class="box special features">
+            <div class="features-row">
+                <section>
+                    <span class="icon major fa-bolt accent2"></span>
+                    <h3>Ahorra Tiempo</h3>
+                    <p>Deja de buscar los temas en páginas de internet que solo te confunden más, aquí encontrarás lo necesario para pasar tu EXADES.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-area-chart accent3"></span>
+                    <h3>Multimedia</h3>
+                    <p>Contiene imágenes que te ayudarán a entender más los temas de la clase.</p>
+                </section>
+            </div>
+            <div class="features-row">
+                <section>
+                    <span class="icon major fa-cloud accent4"></span>
+                    <h3>Archivos en la Nube</h3>
+                    <p>Descarga ejemplos útiles para practicar por tu cuenta.</p>
+                </section>
+                
+            </div>
+
+            <section>
+                <div id="sfc78yrqgzja41lyz29ur18zquyj33mgx8s"></div>
+                <script type="text/javascript" src="https://counter5.wheredoyoucomefrom.ovh/private/counter.js?c=78yrqgzja41lyz29ur18zquyj33mgx8s&down=async" async></script>
+                
+            </section>
+        </section>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; Investigación de Operaciones II. Universidad Autónoma de Campeche. Todos los derechos reservados.</li><li>Equipo de desarrollo: Izaguirre, Víctor. Segovia, Mario</li><li>Diseñado por: Víctor Izaguirre</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dropdown.js"></script>
+<script src="assets/js/sidenav.js"></script>
+
+</body>
+</html>
